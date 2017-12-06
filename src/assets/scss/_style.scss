@@ -5,6 +5,11 @@ header.fixed_header{
 	right: 0;
 	padding: 40px;
 	z-index: 10;
+	transition: 0.5s ease;
+	&.scrolled{
+		background-color: rgba(56,56,56,0.7);
+		padding: 20px;
+	}
 	.menu_wrapper{
 		text-align: right;
 		.menu{
@@ -98,9 +103,10 @@ header.fixed_header{
 	}
 }
 .about_section_wrapper{
+	padding: 40px;
 	h2{
 		text-align: center;
-		padding: 40px 0px;
+		margin-bottom: 40px;
 		color: #323232;
 		font-size: 50px;
 		span{
@@ -108,11 +114,25 @@ header.fixed_header{
 		}
 	}
 	.about_section{
+		margin-bottom: 35px;
 		&.left{
 			text-align: right;
 		}
 		&.right{
 			text-align: left;
+		}
+		.text{
+			p{
+				color: #828282;
+				font-size: 14px;
+				margin-bottom: 0px;
+				&.title{
+					color: #2bb384;
+					margin-bottom: 5px;
+					font-size: 20px;
+					font-weight: 700;
+				}
+			}
 		}
 		.icon{
 			text-align: center;
@@ -127,5 +147,30 @@ header.fixed_header{
 			    text-align: center;
 			}
 		}
+	}
+}
+.approach_section{
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	padding: 40px;
+	h2{
+		text-align: center;
+		margin-bottom: 40px;
+		color: #fff;
+		font-size: 50px;
+		span{
+			font-weight: 800;
+		}
+	}
+	.left{
+		text-align: right;
+		color: #2bb384;
+		font-size: 20px;
+		line-height: 35px;
+	}
+	.right{
+		font-size: 14px;
+		color: #fff;
 	}
 }

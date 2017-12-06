@@ -14490,6 +14490,15 @@ window.$ = _jquery2.default;
 //import './lib/foundation-explicit-pieces';
 (0, _jquery2.default)(document).foundation();
 
+(0, _jquery2.default)(window).scroll(function (e) {
+    e.preventDefault();
+    if (!(0, _jquery2.default)(window).scrollTop()) {
+        (0, _jquery2.default)('header.fixed_header').removeClass('scrolled');
+    } else {
+        (0, _jquery2.default)('header.fixed_header').addClass('scrolled');
+    }
+});
+
 /***/ }),
 /* 21 */
 /***/ (function(module, exports, __webpack_require__) {

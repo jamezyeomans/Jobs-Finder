@@ -9,4 +9,11 @@ import Foundation from 'foundation-sites';
 //import './lib/foundation-explicit-pieces';
 $(document).foundation();
 
-
+$(window).scroll(function(e){
+    e.preventDefault();
+    if(!$(window).scrollTop()) {
+        $('header.fixed_header').removeClass('scrolled');
+    }else{
+        $('header.fixed_header').addClass('scrolled');
+    }
+});

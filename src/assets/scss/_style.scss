@@ -174,3 +174,80 @@ header.fixed_header{
 		color: #fff;
 	}
 }
+.plans_section_wrapper{
+	text-align: right;
+	padding: 40px;
+	h2{
+		margin-bottom: 20px;
+		color: #323232;
+		font-size: 50px;
+		span{
+			font-weight: 800;
+		}
+	}
+	p.tag{
+		font-size: 14px;
+		line-height: 30px;
+	}
+	.price_block{
+		text-align: center;
+		.cell{
+			&.price{
+				border: 1px solid #cdcccc;
+				border-bottom-width: 0;
+				padding: 40px;
+				background-color: #f7f7f7;
+				p{
+					font-size: 12px;
+					&.plan{
+						font-size: 20px;
+						color: #2bb384;
+						margin-bottom: 20px;
+						font-weight: 700;
+					}
+					&.price{
+						font-size: 80px;
+						color: #323232;
+						margin-bottom: 20px;
+					}
+				}
+			}
+			&.text{
+				background-color: #323232;
+				text-align: center;
+				padding: 40px;
+				color: #fff;
+				p{
+					line-height: 35px;
+					margin-bottom: 20px;
+					font-weight: 700;
+				}
+				a{
+					display: block;
+					margin: 0 auto;
+					width: 200px;
+					background-color: #2bb384;
+					color: #fff;
+					padding: 10px;
+					font-size: 18px;
+					transition: 0.5s ease;
+					&:hover{
+						background-color: #fff;
+						color: #2bb384;
+						.arrow{
+							border-left: 1px solid #2bb384;
+							color: #2bb384;
+						}
+					}
+					.arrow{
+						border-left: 1px solid #fff;
+						text-align: center;
+						color: #fff;
+						transition: 0.5s ease;
+					}
+				}
+			}
+		}
+		
+	}
+}

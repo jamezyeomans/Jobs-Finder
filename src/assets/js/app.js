@@ -28,7 +28,7 @@ var myParaxify = paraxify('.paraxify');
 
 // Slick Init
 
-var homepageSlider = $('.homepage_slider_wrapper');
+var homepageSlider = $('.slider');
 
 homepageSlider.slick({
 	dots: true,

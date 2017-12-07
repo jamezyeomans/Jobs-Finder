@@ -14509,7 +14509,7 @@ var myParaxify = paraxify('.paraxify');
 
 // Slick Init
 
-var homepageSlider = (0, _jquery2.default)('.homepage_slider_wrapper');
+var homepageSlider = (0, _jquery2.default)('.slider');
 
 homepageSlider.slick({
 				dots: true,

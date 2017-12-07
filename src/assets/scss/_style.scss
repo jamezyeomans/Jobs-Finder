@@ -3,12 +3,12 @@ header.fixed_header{
 	top: 0;
 	left: 0;
 	right: 0;
-	padding: 40px;
+	padding: rem-calc(40);
 	z-index: 10;
 	transition: 0.5s ease;
 	&.scrolled{
 		background-color: rgba(56,56,56,0.7);
-		padding: 20px;
+		padding: rem-calc(20);
 	}
 	.menu_wrapper{
 		text-align: right;
@@ -45,22 +45,24 @@ header.fixed_header{
 	}
 }
 .homepage_slider_wrapper{
+	background-color: #111;
+	overflow: hidden;
 	.slide{
-		min-height: 650px;
+		min-height: rem-calc(650);
 		width: 100%;
-		background-size: cover;
-		background-position: center;
-		background-repeat: no-repeat;
 		position: relative;
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
 		.content_wrapper{
 			color: #fff;
 			text-align: center;
-			max-width: 500px;
+			max-width: rem-calc(500);
 			width: 100%;
 			@include absolute-center;
 			h1{
-				font-size: 60px;
-				margin-bottom: 40px;
+				font-size: rem-calc(60);
+				margin-bottom: rem-calc(40);
 				span{
 					font-weight: bold;
 				}	
@@ -69,7 +71,7 @@ header.fixed_header{
 				.button_single{
 					position: relative;
 					background-color: rgba(56,56,56,0.7);
-					font-size: 20px;
+					font-size: rem-calc(20);
 					&:hover{
 						.green_element{
 							right: 0;
@@ -79,11 +81,11 @@ header.fixed_header{
 						color: #fff;
 					}
 					.text{
-						padding: 10px 0;
+						padding: rem-calc(10 0);
 						z-index: 2;
 					}
 					.arrow{
-						padding: 10px 0;
+						padding: rem-calc(10 0);
 						z-index: 2;
 					}
 					.green_element{
@@ -103,18 +105,18 @@ header.fixed_header{
 	}
 }
 .about_section_wrapper{
-	padding: 40px;
+	padding: rem-calc(40);
 	h2{
 		text-align: center;
-		margin-bottom: 40px;
+		margin-bottom: rem-calc(40);
 		color: #323232;
-		font-size: 50px;
+		font-size: rem-calc(50);
 		span{
 			font-weight: 800;
 		}
 	}
 	.about_section{
-		margin-bottom: 35px;
+		margin-bottom: rem-calc(35);
 		&.left{
 			text-align: right;
 		}
@@ -124,12 +126,12 @@ header.fixed_header{
 		.text{
 			p{
 				color: #828282;
-				font-size: 14px;
+				font-size: rem-calc(14);
 				margin-bottom: 0px;
 				&.title{
 					color: #2bb384;
-					margin-bottom: 5px;
-					font-size: 20px;
+					margin-bottom: rem-calc(5);
+					font-size: rem-calc(20);
 					font-weight: 700;
 				}
 			}
@@ -137,13 +139,13 @@ header.fixed_header{
 		.icon{
 			text-align: center;
 			.fa{
-				padding: 30px;
-			    font-size: 40px;
+				padding: rem-calc(30);
+			    font-size: rem-calc(40);
 			    background-color: #2bb384;
 			    color: #fff;
 			    border-radius: 50%;
-			    width: 100px;
-			    height: 100px;
+			    width: rem-calc(100);
+			    height: rem-calc(100);
 			    text-align: center;
 			}
 		}
@@ -153,12 +155,12 @@ header.fixed_header{
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
-	padding: 40px;
+	padding: rem-calc(40);
 	h2{
 		text-align: center;
-		margin-bottom: 40px;
+		margin-bottom: rem-calc(40);
 		color: #fff;
-		font-size: 50px;
+		font-size: rem-calc(50);
 		span{
 			font-weight: 800;
 		}
@@ -166,28 +168,28 @@ header.fixed_header{
 	.left{
 		text-align: right;
 		color: #2bb384;
-		font-size: 20px;
-		line-height: 35px;
+		font-size: rem-calc(20);
+		line-height: rem-calc(35);
 	}
 	.right{
-		font-size: 14px;
+		font-size: rem-calc(14);
 		color: #fff;
 	}
 }
 .plans_section_wrapper{
 	text-align: right;
-	padding: 40px;
+	padding: rem-calc(40);
 	h2{
-		margin-bottom: 20px;
+		margin-bottom: rem-calc(20);
 		color: #323232;
-		font-size: 50px;
+		font-size: rem-calc(50);
 		span{
 			font-weight: 800;
 		}
 	}
 	p.tag{
-		font-size: 14px;
-		line-height: 30px;
+		font-size: rem-calc(14);
+		line-height: rem-calc(30);
 	}
 	.price_block{
 		text-align: center;
@@ -195,41 +197,41 @@ header.fixed_header{
 			&.price{
 				border: 1px solid #cdcccc;
 				border-bottom-width: 0;
-				padding: 40px;
+				padding: rem-calc(40);
 				background-color: #f7f7f7;
 				p{
-					font-size: 12px;
+					font-size: rem-calc(12);
 					&.plan{
-						font-size: 20px;
+						font-size: rem-calc(20);
 						color: #2bb384;
-						margin-bottom: 20px;
+						margin-bottom: rem-calc(20);
 						font-weight: 700;
 					}
 					&.price{
-						font-size: 80px;
+						font-size: rem-calc(80);
 						color: #323232;
-						margin-bottom: 20px;
+						margin-bottom: rem-calc(20);
 					}
 				}
 			}
 			&.text{
 				background-color: #323232;
 				text-align: center;
-				padding: 40px;
+				padding: rem-calc(40);
 				color: #fff;
 				p{
-					line-height: 35px;
-					margin-bottom: 20px;
+					line-height: rem-calc(35);
+					margin-bottom: rem-calc(20);
 					font-weight: 700;
 				}
 				a{
 					display: block;
 					margin: 0 auto;
-					width: 200px;
+					width: rem-calc(200);
 					background-color: #2bb384;
 					color: #fff;
-					padding: 10px;
-					font-size: 18px;
+					padding: rem-calc(10);
+					font-size: rem-calc(18);
 					transition: 0.5s ease;
 					&:hover{
 						background-color: #fff;

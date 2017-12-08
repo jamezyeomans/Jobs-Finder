@@ -228,15 +228,18 @@ header.fixed_header{
 				p{
 					font-size: rem-calc(12);
 					&.plan{
-						font-size: rem-calc(20);
+						font-size: rem-calc(24);
 						color: #2bb384;
 						margin-bottom: rem-calc(20);
+						font-family: 'Raleway', sans-serif;
 						font-weight: 700;
 					}
 					&.price{
 						font-size: rem-calc(80);
 						color: #323232;
 						margin-bottom: rem-calc(20);
+						font-family: 'Raleway', sans-serif;
+						font-weight: 700;
 					}
 				}
 			}
@@ -287,7 +290,7 @@ header.fixed_header{
 		margin-bottom: rem-calc(40);
 		font-size: rem-calc(50);
 		span{
-			font-weight: 700;
+			font-weight: 800;
 		}
 	}
 	.cell{
@@ -329,7 +332,7 @@ header.fixed_header{
 		text-align: center;
 		margin-bottom: rem-calc(40);
 		font-size: rem-calc(50);
-		font-weight: 700;
+		font-weight: 800;
 	}
 	.info{
 		text-align: right;

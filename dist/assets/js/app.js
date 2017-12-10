@@ -14496,32 +14496,43 @@ window.$ = _jquery2.default;
 
 //Top Bar Scroll Event
 (0, _jquery2.default)(window).scroll(function (e) {
-				e.preventDefault();
-				if (!(0, _jquery2.default)(window).scrollTop()) {
-								(0, _jquery2.default)('header.fixed_header').removeClass('scrolled');
-				} else {
-								(0, _jquery2.default)('header.fixed_header').addClass('scrolled');
-				}
+	e.preventDefault();
+	if (!(0, _jquery2.default)(window).scrollTop()) {
+		(0, _jquery2.default)('header.fixed_header').removeClass('scrolled');
+	} else {
+		(0, _jquery2.default)('header.fixed_header').addClass('scrolled');
+	}
 });
 
 // Paraxify Init
 var myParaxify = paraxify('.paraxify');
 
 // Slick Init
-
 var homepageSlider = (0, _jquery2.default)('.slider');
 
 homepageSlider.slick({
-				dots: true,
-				arrows: false,
-				slidesToShow: 1,
-				slidesToScroll: 1,
-				infinite: true,
-				speed: 500,
-				fade: true,
-				autoplay: true,
-				autoplaySpeed: 5000,
-				pauseOnHover: false
+	dots: true,
+	arrows: false,
+	slidesToShow: 1,
+	slidesToScroll: 1,
+	infinite: true,
+	speed: 500,
+	fade: true,
+	autoplay: true,
+	autoplaySpeed: 5000,
+	pauseOnHover: false
+});
+
+//Mobile Menu
+var burgerMenu = (0, _jquery2.default)('#open_mobile_menu'),
+    menu = (0, _jquery2.default)('#mobile_menu'),
+    closeMenu = (0, _jquery2.default)('#close_mobile_menu');
+
+burgerMenu.on('click', function () {
+	menu.addClass('open');
+});
+closeMenu.on('click', function () {
+	menu.removeClass('open');
 });
 
 /***/ }),

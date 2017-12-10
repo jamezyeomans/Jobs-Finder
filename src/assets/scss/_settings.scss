@@ -106,8 +106,8 @@ $print-transparent-backgrounds: true;
 
 $breakpoints: (
   small: 0,
-  medium: 640px,
-  large: 1024px,
+  medium: 769px,
+  large: 1025px,
   xlarge: 1200px,
   xxlarge: 1440px,
 );
@@ -371,8 +371,8 @@ $drilldown-arrow-size: 6px;
 // ------------
 
 $dropdown-padding: 1rem;
-$dropdown-background: $body-background;
-$dropdown-border: 1px solid $medium-gray;
+$dropdown-background: #2bb384;
+$dropdown-border: 1px solid #2bb384;
 $dropdown-font-size: 1rem;
 $dropdown-width: 300px;
 $dropdown-radius: $global-radius;

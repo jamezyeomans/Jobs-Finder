@@ -27,7 +27,6 @@ $(window).scroll(function(e){
 var myParaxify = paraxify('.paraxify');
 
 // Slick Init
-
 var homepageSlider = $('.slider');
 
 homepageSlider.slick({
@@ -41,4 +40,16 @@ homepageSlider.slick({
 	autoplay: true,
 	autoplaySpeed: 5000,
 	pauseOnHover: false
+});
+
+//Mobile Menu
+var burgerMenu = $('#open_mobile_menu'),
+	menu = $('#mobile_menu'),
+	closeMenu = $('#close_mobile_menu');
+
+burgerMenu.on('click', function(){
+	menu.addClass('open');
+});
+closeMenu.on('click', function(){
+	menu.removeClass('open');
 });

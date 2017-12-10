@@ -12,6 +12,10 @@ import fs            from 'fs';
 import webpackStream from 'webpack-stream';
 import webpack2      from 'webpack';
 import named         from 'vinyl-named';
+import cssmin        from 'gulp-cssmin';
+import rename        from 'gulp-rename';
+import uglify        from 'gulp-uglify';
+import imagemin      from 'gulp-imagemin'
 
 // Load all Gulp plugins into one variable
 const $ = plugins();
@@ -92,6 +96,9 @@ function sass() {
     .pipe($.if(PRODUCTION, $.cleanCss({ compatibility: 'ie9' })))
     .pipe($.if(!PRODUCTION, $.sourcemaps.write()))
     .pipe(gulp.dest(PATHS.dist + '/assets/css'))
+    .pipe(cssmin())
+    .pipe(rename({suffix: '.min'}))
+    .pipe(gulp.dest(PATHS.dist + '/assets/css'))
     .pipe(browser.reload({ stream: true }));
 }
 
@@ -116,9 +123,11 @@ function javascript() {
     .pipe(named())
     .pipe($.sourcemaps.init())
     .pipe(webpackStream(webpackConfig, webpack2))
-    .pipe($.if(PRODUCTION, $.uglify()
-      .on('error', e => { console.log(e); })
-    ))
+    // .pipe($.if(PRODUCTION, $.uglify()
+    //   .on('error', e => { console.log(e); })
+    // ))
+    .pipe(uglify())
+    .pipe(rename({suffix: '.min'}))
     .pipe($.if(!PRODUCTION, $.sourcemaps.write()))
     .pipe(gulp.dest(PATHS.dist + '/assets/js'));
 }
@@ -127,9 +136,11 @@ function javascript() {
 // In production, the images are compressed
 function images() {
   return gulp.src('src/assets/img/**/*')
-    .pipe($.if(PRODUCTION, $.imagemin({
-      progressive: true
-    })))
+    // .pipe($.if(PRODUCTION, $.imagemin({
+    //   progressive: true
+    // })))
+    .pipe(imagemin())
+    .pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest(PATHS.dist + '/assets/img'));
 }
 
